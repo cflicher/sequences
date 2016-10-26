@@ -11,15 +11,15 @@ class GuessesController < ApplicationController
     g.second_num = params["second_number"].to_i
     g.third_num = params["third_number"].to_i
     g.save
-    
+
     @list = Guess.all
 
 
-    if @second_number > @first_number && @third_number > @second_number
-      @result = "Yes!"
-    else
-      @result = "No."
-    end
+    # if @second_number > @first_number && @third_number > @second_number
+    #   @result = "Yes!"
+    # else
+    #   @result = "No."
+    # end
 
     render("/index/all_guesses.html.erb")
   end

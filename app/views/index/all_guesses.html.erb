@@ -23,17 +23,13 @@
     <%= guess.first_num %>,
     <%= guess.second_num %>,
     <%= guess.third_num %>
+    <% if guess.second_num > guess.first_num && guess.third_num > guess.second_num %>
+      <%= "Yes!" %>
+    <% else %>
+      <%= "No." %>
+    <% end %>
   </li>
 <% end %>
-</ul>
-
-<ul>
-  <li>
-    <%= @first_number %>, <%= @second_number %>, <%= @third_number %>
-
-    <%= @result %>
-  </li>
-
 </ul>
 
 <form action="/all_guesses">
